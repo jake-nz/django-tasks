@@ -2,8 +2,7 @@ from tasks.models import *
 from django.contrib import admin
 
 class TaskAdmin(admin.ModelAdmin):
-    list_display = ('title', 'status', 'priority', 'type', 'submitter', 
-        'submitted_date', 'modified_date')
+    list_display = ('title', 'status', 'priority', 'type', 'submitted_date', 'modified_date')
     list_display_editable = ('status', 'priority', )
     list_display_links = ('title', )
     list_filter = ('priority', 'status', 'submitted_date', 'type',)
